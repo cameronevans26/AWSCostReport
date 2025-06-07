@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars_files:
-    - "../vars/vault.yml"
+    - "vault.yml"
 
   tasks:
     - name: Run Python script with environment variables
