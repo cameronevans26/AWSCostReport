@@ -1,0 +1,19 @@
+---
+- name: Run AWS cost report using environment variables
+  hosts: localhost
+  gather_facts: false
+
+  vars_files:
+    - "../vars/vault.yml"
+
+  tasks:
+    - name: Run Python script with environment variables
+      ansible.builtin.command:
+        cmd: python3 AWSCostReport.py
+      environment:
+        AWS_ACCESS_KEY_ID_DEV: "{{ AWS_ACCESS_KEY_ID_DEV }}"
+        AWS_SECRET_ACCESS_KEY_DEV: "{{ AWS_SECRET_ACCESS_KEY_DEV }}"
+        AWS_ACCESS_KEY_ID_ITHDP: "{{ AWS_ACCESS_KEY_ID_DEV2 }}"
+        AWS_SECRET_ACCESS_KEY_ITHDP: "{{ AWS_SECRET_ACCESS_KEY_DEV2 }}"
+        AWS_ACCESS_KEY_ID_PROD: "{{ AWS_ACCESS_KEY_ID_DEV3 }}"
+        AWS_SECRET_ACCESS_KEY_PROD: "{{ AWS_SECRET_ACCESS_KEY_DEV3 }}"
