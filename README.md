@@ -4,6 +4,10 @@ This project uses Python and Ansible to generate a monthly AWS cost report by qu
 
 ---
 
+## Intended Use
+
+This project is designed for **company/enterprise environments** and is intended to run on Ansible Tower (AWX) or Ansible Automation Platform for automated AWS cost reporting. It can also be run manually using Ansible and Python on a local machine.
+
 ## Features
 
 ✅ Fetches monthly AWS costs broken down by service  
