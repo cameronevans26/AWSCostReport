@@ -30,8 +30,8 @@ This project uses Python and Ansible to generate a monthly AWS cost report by qu
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/aws-cost-report.git
-   cd aws-cost-report
+   git clone https://github.com/yourusername/AWSCostReport.git
+   cd AWSCostReport
 2. Install Python dependencies:
   ```bash
   pip install boto3
